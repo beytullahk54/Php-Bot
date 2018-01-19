@@ -1,5 +1,5 @@
 ﻿<?php 
-ini_set('max_execution_time', 500);
+ini_set('max_execution_time', 2000);
 require "simple_html_dom.php";
 function veri($r) {
    
