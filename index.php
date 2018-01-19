@@ -1,15 +1,16 @@
 ﻿<?php 
-ini_set('max_execution_time', 300);
+ini_set('max_execution_time', 500000);
 require "simple_html_dom.php";
-include("ayar.php");
 function veri($r) {
    
 	$html = str_get_html(file_get_contents('http://'.$r.'.diyanet.gov.tr'));  // Siteye bağlan
-
+	include("ayar.php");
 	$deneme="";
-	foreach($html->find('div.text-left') as $element)  // Sitedeki tüm "a" elementlerini ara
+	foreach($html->find('div.text-left > a') as $element)  // Sitedeki tüm "a" elementlerini ara
 	{
-	        $deneme=$deneme . '<br>' . $element->innertext ;   // Foreach ile saydaki "a" elementi kadar döndür. Ve "href" değeri ile linke ulaş
+	        $deneme=$deneme . '<br>' . $element->href ;   // Foreach ile saydaki "a" elementi kadar döndür. Ve "href" değeri ile linke ulaş
+	         $ekle=$baglanti->prepare("insert into  linkler(link,sehir,link_adi) values(?,?,?)"); 
+    		 $ekle -> execute(array(trim($element->innertext),$r,$element->href));
 	}
    return $deneme;
 }
@@ -20,8 +21,7 @@ foreach ($sehirler as $sehir) {
 	
 	$url=trim(veri($sehir));
 	echo  $sehir.'<br>'.$url.'<br>';
-    $ekle=$baglanti->prepare("insert into  linkler(link,sehir) values(?,?)"); 
-    $ekle -> execute(array($url,$sehir));
+   
 
 }
 
