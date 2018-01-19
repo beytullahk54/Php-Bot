@@ -1,5 +1,5 @@
 ﻿<?php 
-ini_set('max_execution_time', 500000);
+ini_set('max_execution_time', 500);
 require "simple_html_dom.php";
 function veri($r) {
    
@@ -11,6 +11,7 @@ function veri($r) {
 	        $deneme=$deneme . '<br>' . $element->href ;   // Foreach ile saydaki "a" elementi kadar döndür. Ve "href" değeri ile linke ulaş
 	         $ekle=$baglanti->prepare("insert into  linkler(link,sehir,link_adi) values(?,?,?)"); 
     		 $ekle -> execute(array(trim($element->innertext),$r,$element->href));
+    		 sleep(1);
 	}
    return $deneme;
 }
