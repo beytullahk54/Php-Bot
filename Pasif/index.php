@@ -76,9 +76,7 @@
   <div class="container" style="margin-top:25px; ">
 
                     <ul id="eliteregister">
-                    	<a href=""><li class="active">Botu Çalıştır</li></a>
-                    	<a href="../"><li>Göster</li></a>
-                      <a href="/Php-Bot/Pasif"><li>Pasif Linkler</li></a>
+                    	<?php include('../menu.php'); ?>
                     </ul>
 		<main>
 			  <?php include('goster.php'); ?>
