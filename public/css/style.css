@@ -1,0 +1,148 @@
+/*
+Global
+============================= */
+
+body{
+	font-family:'Source Sans Pro', sans-serif;
+	color:#666;
+	background: rgb(237,241,245);
+	font-size:16px;
+	font-weight: 400;
+	  -webkit-font-smoothing: antialiased;
+     font-smoothing: antialiased;
+         padding-bottom: 100px;
+}
+
+* {
+     text-shadow: 0 1px 1px rgba(255,255,255,.3);
+}
+
+p{line-height: 24px}
+a{color:#0088cc;}
+a:hover{text-decoration: none;}
+
+
+
+h1,h2,h3,h4,h5,h6{ font-family:'Source Sans Pro', sans-serif}
+
+h1{font-size:50px; font-weight: 200; color: #555; margin-bottom: 20px;}
+h2{font-size: 30px; font-weight: 300; color:#444; margin: 30px 0}
+h3{font-size: 20px; font-weight: 400; margin: 20px 0;}
+h4{font-size:18px; font-weight: 400}
+
+/* 
+HEADER ROW STYLE
+===========================*/
+#header-row{
+	background: #ffffff;
+	border-bottom:1px solid #eee;
+	padding: 15px 0;
+}
+
+#header-row .navbar{margin:10px 0 0 0;}
+
+#header-row .navbar .navbar-inner{
+	border:none;
+	box-shadow: none;
+	margin: 0;
+	background: transparent;
+}
+
+#header-row .navbar .navbar-inner ul.nav > li > a{
+	box-shadow: none;
+	background: transparent;
+	color: #7e8e5d;
+}
+#header-row .navbar .navbar-inner ul.nav li.active a{
+	color: #576142;
+}
+
+.container main{    border-radius: 3px;
+    padding: 20px 20px 10px 20px;
+    background: white;
+    border: 0 none;
+    box-shadow: 0 0 15px 1px rgba(0,0,0,0.1);}
+
+.nav li{margin-left:5px;}
+
+.btn:hover{
+	    background-color: #8fa266 !important;
+	    background-position: 0 -40px !important;
+	    color:white;
+}
+footer{
+border-top:1px solid #eee;
+background: #ffffff;
+padding: 10px 0;
+color: #869467;;
+margin-top:40px;
+position: fixed;
+width: 100%;	
+bottom: 0px;
+}
+
+/*eliteregister*/
+#eliteregister {
+text-align: center;	
+margin-bottom: 30px;
+overflow: hidden;
+padding-left: 0px;
+/*CSS counters to number the steps*/
+counter-reset: step;
+}
+#eliteregister li {
+list-style-type: none;
+color: #686868;
+font-size: 13px;
+width: 33.33%;
+float: left;
+position: relative;
+   
+}
+#eliteregister li:before {
+content: counter(step);
+counter-increment: step;
+width: 40px;
+line-height: 40px;
+display: block;
+font-size: 10px;
+color: #fff;
+background: #686868;
+border-radius: 100%;
+position: relative;
+z-index: 10;
+margin: 0 auto 5px auto;
+}
+/*eliteregister connectors*/
+#eliteregister li:after {
+content: '';
+width: 100%;
+height: 2px;
+background:#dadada;
+position: absolute;
+left: -50%;
+top: 19px;
+z-index:1; /*put it behind the numbers*/
+}
+#eliteregister li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#eliteregister li.active:before, #eliteregister li.active:after {
+background: #53e69d;
+color: #fff;
+}
+/* Responsive View
+=================================*/
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+
+ }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
+
+

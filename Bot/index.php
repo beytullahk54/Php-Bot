@@ -7,14 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Bootstrap -->
-    <link href="public/css/bootstrap.css" rel="stylesheet">
-    <link href="public/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="public/css/style.css" rel="stylesheet"> 
+    <link href="../public/css/bootstrap.css" rel="stylesheet">
+    <link href="../public/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../public/css/style.css" rel="stylesheet"> 
     
     <!--Font-->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-    <link rel="shortcut icon" href="public/img/logo.png" />	
+    <link rel="shortcut icon" href="../public/img/logo.png" />	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,7 +25,7 @@
       <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" href="public/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../public/ico/apple-touch-icon-57-precomposed.png">
 
 
       
@@ -43,7 +43,7 @@
     <div class="container">
       <div class="row">
               <!--LOGO-->
-              <div class="span3"><a class="brand" href="#"><img src="public/img/logo.png" style="width: 20%"></a></div>
+              <div class="span3"><a class="brand" href="#"><img src="../public/img/logo.png" style="width: 20%"></a></div>
               <!-- /LOGO -->
 
             <!-- MAIN NAVIGATION -->  
@@ -76,12 +76,12 @@
   <div class="container" style="margin-top:25px; ">
 
                     <ul id="eliteregister">
-                    	<a href="/Bot"><li class="active">Çalıştır</li></a>
-                    	<a href=""><li>Göster</li></a>
+                    	<a href=""><li class="active">Botu Çalıştır</li></a>
+                    	<a href="../"><li>Göster</li></a>
                       <a href="/Php-Bot/Pasif"><li>Pasif Linkler</li></a>
                     </ul>
 		<main>
-			  <?php include('goster.php'); ?>
+			  <?php include('bot_cek_meb.php'); ?>
 		</main>
 
     
